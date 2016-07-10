@@ -51,17 +51,22 @@
 	__webpack_require__(2);
 
 	// npm
-	let angular = __webpack_require__(7);
+	const angular = __webpack_require__(7);
 	const cowsay = __webpack_require__(9);
 
 	// app constants
 	const app = angular.module('cowsayApp', []);
 
 	app.controller('CowsayController', ['$scope', function($scope){
-	  $scope.cowsayText = 'write somehting here to make me talk!';
+	  $scope.cowsayText = 'you can make me talk!';
 	  $scope.say = function(){
-	    let text = $scope.cowsayText || '';
+	    let text = $scope.cowsayText || 'Write something here!';
 	    return cowsay.say({text: text});
+	  };
+
+	  $scope.done = function(){
+	    let text = $scope.cowsayText || 'write something here!';
+	    $scope.result = cowsay.say({text: text});
 	  };
 	}]);
 

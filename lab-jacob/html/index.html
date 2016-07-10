@@ -2,17 +2,19 @@
 <html ng-app="cowsayApp">
   <head>
     <title>Code Fellows Angular Lab</title>
-    <script src="bundle.js"></script>
-    <link rel="stylesheet" type="text/css" href="bundle.css">
+    <script src="../build/bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="../build/bundle.css">
   </head>
   <body>
-    <main ng-controller="cowsayController">
+    <main ng-controller="CowsayController">
       <form ng-submit="done()">
-        <label for="cowsay-text"></label>
-        <input name="cowsay-text" type="text" ng-model="cowsay-text">
+        <label for="cowsay-text">Tell me your thoughts</label>
+        <input name="cowsay-text" type="text" ng-model="cowsayText">
+        <button type="submit">cowsay:</button>
       </form>
-      <pre></pre>
-      <pre></pre>
+      <p>{{cowsayText}}</p>
+      <pre> {{say()}} </pre>
+      <pre> {{result}} </pre>
     </main>
   </body>
 </html>
