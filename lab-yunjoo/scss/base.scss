@@ -1,0 +1,23 @@
+//import librarys
+@import "vendor/normalize.css";
+//import partials
+@import "_theme";
+//write base styles
+
+body {
+  background-color: $app-green;
+}
+
+p {
+  font-size: 37px;
+  color: $app-blue;
+}
+
+label {
+  color: $app-pink;
+}
+
+.allTheText {
+  text-align:center;
+  align-content: center;
+}
