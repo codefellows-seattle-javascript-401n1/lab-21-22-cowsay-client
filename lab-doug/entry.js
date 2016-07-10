@@ -31,10 +31,10 @@ const app = angular.module('cowApp', []);
  * @param  {variable} function($scope)  a list of parameters listed in the same order as the dependencies in the line above
  * @return {value}                    returns the result of cowsay.say method  with "text" as parameter
  */
-app.controller('cowController', ['$scope', function($scope){
-  $scope.cowText = 'default text for cow';
+app.controller('cowsayController', ['$scope', function($scope){
+  $scope.cowsayText = 'default text for cow';
   $scope.say = function(){
-    var text = $scope.cowText || '';
+    var text = $scope.cowsayText || '';
     return cowsay.say({text: text});
   };
 }])
