@@ -8,6 +8,19 @@ body {
 pre {
   background-color: $app-white;
   color: red;
+  font-size: 5px;
+}
+
+pre.finalResult {
+  font-size: 14px;
+  background-color: $app-teal;
+  color: $app-white;
+  font-weight: bold;
+}
+pre.finalResult:hover {
+  background-color: $app-blue;
+  color: #5f0;
+
 }
 
 h1 {
