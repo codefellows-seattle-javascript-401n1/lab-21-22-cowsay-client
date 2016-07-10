@@ -1,0 +1,19 @@
+{
+  "name": "lab-doug",
+  "version": "1.0.0",
+  "description": "lab 21 - 22",
+  "main": "entry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsmatth/lab-21-22-cowsay-client.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gsmatth/lab-21-22-cowsay-client/issues"
+  },
+  "homepage": "https://github.com/gsmatth/lab-21-22-cowsay-client#readme"
+}
