@@ -6,7 +6,7 @@
   "scripts": {
     "test": "webpack-dev-server",
     "watch": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
-    "lint": "./node_modules/eslint/bin/eslint.js"
+    "lint": "./node_modules/eslint/bin/eslint.js *.js"
   },
   "author": "",
   "license": "ISC",
