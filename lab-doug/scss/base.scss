@@ -1,0 +1,17 @@
+//import libraries
+@import "vendor/normalize.css";
+//import partials
+@import "_theme";
+
+//write base file
+body {
+  background-color: $app-orange;
+}
+
+main {
+  background-color: $app-red;
+}
+
+form {
+  background-color: $app-purple;
+}
