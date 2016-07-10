@@ -1,3 +1,5 @@
+# ignore build.js
+build.js
 # ignore node_modules
 node_modules
 # ignore db directorys
