@@ -4,3 +4,19 @@
 body {
   background-color: #cfec5a;
 }
+.preview {
+  font-size: .5em;
+  width: 30%;
+  float: left;
+}
+// .final {
+//   font-size: 1.5em;
+// float: left;
+// height: 30%;
+// }
+.finalForm {
+  background-color: $app-blue;
+  border: 1 dashed black;
+  width: 40em;
+  height: 30em;
+}
