@@ -13,12 +13,12 @@ app.controller('CowsayController', ['$scope', function($scope){
   $scope.cowsayText = 'I say the coolest things!';
   $scope.cowsayFile = 'default';
   $scope.say = function(){
-    let text = $scope.cowsayText || 'Fill this out';
+    let text = $scope.cowsayText || 'Fill this out!';
     return cowsay.say({text: text, f: $scope.cowsayFile});
   };
 
   $scope.done = function(){
-    let text = $scope.cowsayText || 'fill this out!';
+    let text = $scope.cowsayText || 'Fill this out!';
     $scope.result = cowsay.say({text: text, f: $scope.cowsayFile});
   };
 
