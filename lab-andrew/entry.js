@@ -9,16 +9,28 @@ var app = angular.module('cowsayApp', []);
 app.controller('CowsayController', ['$scope', function($scope){
   $scope.cowsayText = 'And so it begins';
   $scope.cowsayFile = 'ghostbusters';
+  $scope.prev = [];
+  $scope.count = 0;
   $scope.say = function() {
-    let text = $scope.cowsayText || 'Please add some text trolls';
-    return cowsay.say({text: text, f: $scope.cowsayFile});
+    $scope.result = cowsay.say({text: $scope.cowsayText, f: $scope.cowsayFile});
+    return cowsay.say({text: $scope.cowsayText, f: $scope.cowsayFile});
   };
-  $scope.done = function() {
-    let text = $scope.cowsayText || 'Please add some text trolls';
-    $scope.result = cowsay.say({text: text, f: $scope.cowsayFile});
+  $scope.finalize = function() {
+    console.log('LOGGED TROLLS');
+    console.log($scope.result);
+    $scope.finalizeResult = $scope.result || '';
+    $scope.prev.push($scope.result);
+    $scope.count++;
   };
-  cowsay.finalize = function() {
-    $scope.finalize = $scope.result;
+  $scope.previous = function() {
+    if($scope.prev.length === 0) {
+      $scope.finalizeResult = $scope.prev[0];
+      $scope.count = 0;
+    }
+    $scope.prev.pop();
+    $scope.finalizeResult = $scope.prev[$scope.prev.length - 1] || '';
+    console.log('PREV AFTER', $scope.prev);
+    $scope.count--;
   };
   cowsay.list(function(err, list) {
     if(err) {

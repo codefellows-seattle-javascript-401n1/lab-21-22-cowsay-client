@@ -7,22 +7,22 @@
   </head>
   <body>
     <main ng-controller="CowsayController">
-      <form ng-submit="finalize()">
+      <form>
         <label for="cowsay-text">cowsay</label>
         <input
         name="cowsay-text"
         type="text"
         ng-model="cowsayText"/>
-        <button type="button">Lets do this!</button>
-      <select ng-model="cowsayFile">
+      <select name="cow files" ng-model="cowsayFile">
         <option ng-repeat="cow in cowFiles" value="{{cow}}">{{cow}}</option>
       </select>
+      <button type="submit" ng-click="finalize()">Taylor wishes</button>
+      <button type="submit" ng-click="previous()">Previous - {{count}}</button>
     </form>
       <p>text: {{cowsayText}}</p>
       <pre>{{say()}}</pre>
-      <pre>{{result}}</pre>
-      <pre>{{say()}}</pre>
-      <pre>{{result}}</pre>
+      <!-- <pre>{{result}}</pre> -->
+      <pre>{{finalizeResult}}</pre>
     </main>
   </body>
 </html>
