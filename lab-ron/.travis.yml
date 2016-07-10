@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - '4.4.3'
+sudo: required
+before_script: npm i -g eslint
+script: 
+  - ./script/test-submissions.sh
