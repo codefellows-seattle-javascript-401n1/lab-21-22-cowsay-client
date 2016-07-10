@@ -10,9 +10,22 @@ const app = angular.module('cowsayApp', []);
 app.controller('CowsayController', ['$scope', function($scope){
   $scope.cowsayText = 'Cowabung, dude.';
   $scope.cowsayFile = 'default';
+  $scope.previousCow = '';
+
+  $scope.finalize = function(text, file) {
+    text = text || '';
+    file = file || 'default';
+    $scope.previousCow = $scope.finalCow || '';
+    return $scope.finalCow = cowsay.say({text: text, f: $scope.cowsayFile});
+  };
+
   $scope.say = function() {
     let text = $scope.cowsayText || '';
     return $scope.result = cowsay.say({text: text, f: $scope.cowsayFile});
+  };
+
+  $scope.resetCow = function() {
+    return $scope.finalCow = $scope.previousCow || '';
   };
 
   cowsay.list((err, list) => {
