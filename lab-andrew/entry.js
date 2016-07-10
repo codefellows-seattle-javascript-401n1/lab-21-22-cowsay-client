@@ -4,14 +4,21 @@ require('./scss/base.scss');
 
 const angular = require('angular');
 const cowsay = require('cowsay-browser');
-const app = angular.module('cowsayApp', []);
+var app = angular.module('cowsayApp', []);
 
 app.controller('CowsayController', ['$scope', function($scope){
   $scope.cowsayText = 'And so it begins';
   $scope.cowsayFile = 'ghostbusters';
   $scope.say = function() {
     let text = $scope.cowsayText || 'Please add some text trolls';
+    return cowsay.say({text: text, f: $scope.cowsayFile});
+  };
+  $scope.done = function() {
+    let text = $scope.cowsayText || 'Please add some text trolls';
     $scope.result = cowsay.say({text: text, f: $scope.cowsayFile});
+  };
+  cowsay.finalize = function() {
+    $scope.finalize = $scope.result;
   };
   cowsay.list(function(err, list) {
     if(err) {

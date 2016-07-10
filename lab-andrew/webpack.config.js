@@ -14,7 +14,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /|.scss$/,
+        test: /\.scss$/,
         loader: ExtractPlugin.extract('style', 'css!sass!')
       },
       {
