@@ -1,0 +1,15 @@
+@import "vendor/normalize.css";
+@import "_theme";
+
+body {
+  background-color: $app-pink;
+}
+
+pre {
+  background-color: $app-white;
+  color: red;
+}
+
+h1 {
+  background-color: $app-teal;
+}
