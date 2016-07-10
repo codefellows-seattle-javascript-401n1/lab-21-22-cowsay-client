@@ -1,0 +1,18 @@
+//librarys
+@import "vendor/normalize.css";
+//partials
+@import "_theme";
+//base style
+
+body {
+  font-size: 1.5em;
+  background-color: $cow-grass;
+}
+pre {
+  font-size: 1.5em;
+  color: $cow-cow;
+}
+label {
+  font-size: 1.5em;
+  color: $cow-blue;
+}

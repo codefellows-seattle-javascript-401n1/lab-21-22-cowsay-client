@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="cowsayApp">
+  <head>
+    <title>Cow Say WAHT!? </title>
+    <link rel="stylesheet" type="text/css" href="bundle.css"/>
+    <script src="bundle.js"></script>
+  </head>
+  <body>
+    <main ng-controller="cowsayController">
+    <form ng-submit="done()">
+      <label for="cowsay-text"> Cow Says </label>
+      <input
+      name="cowsay-text"
+      type="text"
+      ng-model="cowsayText"/>
+      <button type="submit"> SAY WAHT! </button>
+    </form>
+    <p>Text: {{cowsayText}}</p>
+    <pre> {{say()}} </pre>
+    <pre> {{result}} </pre>
+  </main>
+  </body>
+</html>
