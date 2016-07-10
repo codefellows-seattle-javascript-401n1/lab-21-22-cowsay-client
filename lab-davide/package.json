@@ -1,0 +1,24 @@
+{
+  "name": "lab-davide",
+  "version": "1.0.1",
+  "description": "",
+  "main": "entry.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FazioD/lab-21-22-cowsay-client.git"
+  },
+  "author": "faziod@uw.edu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FazioD/lab-21-22-cowsay-client/issues"
+  },
+  "homepage": "https://github.com/FazioD/lab-21-22-cowsay-client#readme",
+  "devDependencies": {
+    "file-loader": "^0.9.0",
+    "jquery": "^3.1.0",
+    "webpack": "^1.13.1"
+  }
+}
