@@ -16,14 +16,14 @@
       <select name="cow files" ng-model="cowsayFile">
         <option ng-repeat="cow in cowFiles" value="{{cow}}">{{cow}}</option>
       </select>
-      <button type="submit" ng-click="finalize()">Taylor wishes</button>
+      <button type="submit" ng-click="finalize()">Finalize</button>
       <button type="submit" ng-click="previous()">Previous - {{count}}</button>
     </form>
       <p>text: {{cowsayText}}</p>
+      <h1>preview</h1>
       <pre class="preview">{{say()}}</pre>
+      <h1 id="finalH1">FINAL</h1>
       <fieldset class="finalForm">
-        <!-- <legend>Final
-        </legend> -->
       <pre class="final">{{finalizeResult}}</pre>
   </fieldset>
     </main>

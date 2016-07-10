@@ -16,7 +16,6 @@ app.controller('CowsayController', ['$scope', function($scope){
     return cowsay.say({text: $scope.cowsayText, f: $scope.cowsayFile});
   };
   $scope.finalize = function() {
-    console.log('LOGGED TROLLS');
     console.log($scope.result);
     $scope.finalizeResult = $scope.result || '';
     $scope.prev.push($scope.result);
@@ -29,7 +28,6 @@ app.controller('CowsayController', ['$scope', function($scope){
     }
     $scope.prev.pop();
     $scope.finalizeResult = $scope.prev[$scope.prev.length - 1] || '';
-    console.log('PREV AFTER', $scope.prev);
     $scope.count--;
   };
   cowsay.list(function(err, list) {
