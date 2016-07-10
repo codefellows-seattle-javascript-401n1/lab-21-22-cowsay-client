@@ -1,0 +1,11 @@
+@import "vendor/normalize.css";
+@import "_theme.scss";
+
+body {
+  background-color: $app-babyblue;
+  color: $app-brown;
+}
+
+pre {
+  background-color: $app-cyan;
+}
