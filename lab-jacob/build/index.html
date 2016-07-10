@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="cowsayApp">
+  <head>
+    <title>Code Fellows Angular Lab</title>
+    <script src="bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="bundle.css">
+  </head>
+  <body>
+    <main ng-controller="cowsayController">
+      <form ng-submit="done()">
+        <label for="cowsay-text"></label>
+        <input name="cowsay-text" type="text" ng-model="cowsay-text">
+      </form>
+      <pre></pre>
+      <pre></pre>
+    </main>
+  </body>
+</html>
