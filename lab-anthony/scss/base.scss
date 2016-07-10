@@ -1,0 +1,15 @@
+@import 'vendor/normalize.css';
+
+@import '_theme';
+
+body {
+  background: $app-blue;
+}
+
+h1 {
+  color: $app-hyper;
+}
+
+pre {
+  color: $app-grey;
+}
