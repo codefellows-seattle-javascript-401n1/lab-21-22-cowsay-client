@@ -7,6 +7,9 @@ logs
 *.log
 npm-debug.log*
 
+#webpack
+build
+
 #Mongo
 db
 

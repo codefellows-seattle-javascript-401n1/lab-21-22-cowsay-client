@@ -5,7 +5,8 @@
   "main": "entry.js",
   "scripts": {
     "watch": "webpack-dev-server --inline --hot",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",

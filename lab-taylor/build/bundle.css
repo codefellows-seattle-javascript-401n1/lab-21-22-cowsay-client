@@ -417,5 +417,28 @@ textarea {
   -webkit-appearance: button; /* 1 */
   font: inherit; /* 2 */
 }
-pre {
+body {
+  margin: 5px; }
+
+label {
+  font-size: 2em; }
+
+pre.live {
   color: #ff0998; }
+
+pre.final {
+  color: #0fa5b2; }
+
+button {
+  border-color: #0fa5b2;
+  color: #0fa5b2;
+  border-radius: 5px;
+  padding: 1.5%;
+  margin: 5px;
+  border-width: thin;
+  border-style: solid;
+  background-color: #ffffff; }
+
+button:hover {
+  background-color: #1cbecc;
+  color: #ffffff; }
