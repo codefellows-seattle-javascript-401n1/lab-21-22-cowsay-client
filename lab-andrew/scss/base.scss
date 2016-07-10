@@ -1,0 +1,22 @@
+@import "vendor/normalize.css";
+@import "_theme";
+
+body {
+  background-color: #cfec5a;
+}
+.preview {
+  font-size: .5em;
+  width: 30%;
+  float: left;
+}
+.finalForm {
+  background-color: $app-blue;
+  border: 1 dashed black;
+  width: 40em;
+  height: 30em;
+  // margin-top: -10%
+}
+#finalH1 {
+  margin-top: -5%;
+  margin-left: 30%
+}

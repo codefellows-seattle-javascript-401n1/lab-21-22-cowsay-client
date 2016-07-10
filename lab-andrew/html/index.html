@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="cowsayApp">
+  <head>
+    <title>Cowsay trolls</title>
+    <link rel="stylesheet" href="bundle.css" type="text/css"/>
+    <script src="bundle.js"></script>
+  </head>
+  <body>
+    <main ng-controller="CowsayController">
+      <form>
+        <label for="cowsay-text">cowsay</label>
+        <input
+        name="cowsay-text"
+        type="text"
+        ng-model="cowsayText"/>
+      <select name="cow files" ng-model="cowsayFile">
+        <option ng-repeat="cow in cowFiles" value="{{cow}}">{{cow}}</option>
+      </select>
+      <button type="submit" ng-click="finalize()">Finalize</button>
+      <button type="submit" ng-click="previous()">Previous - {{count}}</button>
+    </form>
+      <p>text: {{cowsayText}}</p>
+      <h1>preview</h1>
+      <pre class="preview">{{say()}}</pre>
+      <h1 id="finalH1">FINAL</h1>
+      <fieldset class="finalForm">
+      <pre class="final">{{finalizeResult}}</pre>
+  </fieldset>
+    </main>
+  </body>
+</html>
