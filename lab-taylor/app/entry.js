@@ -16,7 +16,7 @@ app.controller('CowsayController', ['$scope', function($scope){
     text = text || '';
     file = file || 'default';
     $scope.previousCow = $scope.finalCow || '';
-    return $scope.finalCow = cowsay.say({text: text, f: $scope.cowsayFile});
+    return $scope.finalCow = cowsay.say({text: text, f: file});
   };
 
   $scope.say = function() {
