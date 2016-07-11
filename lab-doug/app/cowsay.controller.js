@@ -17,8 +17,5 @@ angular.module('cowsayApp').controller('cowsayController', ['$scope', function($
     var text = $scope.cowsayText || '';
     return cowsay.say({text: text});
   };
-  $scope.finalSay = function(text){
-    // var text = $scope.cowsayText || '';
-    return cowsay.say({text: text});
-  };
+  $scope.finalSay = cowsay.say({text: $scope.cowsayText });
 }]);
