@@ -1,4 +1,3 @@
-'use strict';
 //webpack assets (html|images|css|scss)
 /**
  * we are designating a specific loader for this file because we do not want this file to be loaded as part of the bundle.
@@ -11,7 +10,7 @@
  * everything after the last bang, is the path to the file we want to load.
  */
 //require webpack assets
-require('!!file?name=[name].[ext]?./html/index.html');
+require('!!file?name=[name].[ext]!./html/index.html');
 /**
  * the config for scss loader is already included in the webpack.config.js file
  * By requiring this, we will pass the base.css file to the loader specified for scss files in webpack.config.js and the output will be the bundle.css
@@ -21,7 +20,7 @@ require('./scss/base.scss');
 const angular = require('angular');
 const cowsay = require('cowsay-browser');
 //module constants
-const app = angular.module('cowApp', []);
+const app = angular.module('cowsayApp', []);
 //app logic
 /**
  * app - description
@@ -37,4 +36,8 @@ app.controller('cowsayController', ['$scope', function($scope){
     var text = $scope.cowsayText || '';
     return cowsay.say({text: text});
   };
-}])
+  $scope.finalSay = function(text){
+    // var text = $scope.cowsayText || '';
+    return cowsay.say({text: text});
+  };
+}]);

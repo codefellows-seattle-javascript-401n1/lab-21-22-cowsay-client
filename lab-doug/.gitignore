@@ -1,6 +1,6 @@
 env.sh
 # Created by https://www.gitignore.io/api/osx,linux,node
-
+build
 ### OSX ###
 *.DS_Store
 .AppleDouble

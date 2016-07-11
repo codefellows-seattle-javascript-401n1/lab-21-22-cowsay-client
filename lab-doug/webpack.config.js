@@ -1,7 +1,7 @@
 'use strict';
 
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var babel = require('babel');
+var babel = require('babel-loader');
 /**
  * when webpack is called, it will look for the webpack.config.js file.  If it is found, it will require this module, which exports an object that configs webpack.
  * the "entry" property is the start point for webpack
@@ -28,7 +28,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: babel,
+        loader: 'babel',
         query: {
           presets: ['es2015']
         }
@@ -38,7 +38,7 @@ module.exports = {
   plugins: [
 
     /**
-     * This plugin supports the scss loader above.  Bundle.css is the output of this operation    
+     * This plugin supports the scss loader above.  Bundle.css is the output of this operation
      */
     new ExtractTextPlugin('bundle.css')
   ]
