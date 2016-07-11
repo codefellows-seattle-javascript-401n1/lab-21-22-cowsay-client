@@ -4,9 +4,9 @@
 require('!!file?name=[name].[ext]!./app/html/index.html');
 require('./app/scss/base.scss');
 //npm modules
-const angular = require('angular');
-const cowsay = require('cowsay-browser');
-// //module constants
-const app = angular.module('cowsayApp', []);
+require('angular');
+require('cowsay-browser');
+//module constants
+require('./app/app.module.js');
 // //app logic
-const cowsayController = require('./app/cowsay.controller.js');
+require('./app/cowsay.controller.js');

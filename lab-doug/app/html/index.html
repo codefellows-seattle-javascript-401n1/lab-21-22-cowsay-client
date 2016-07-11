@@ -10,10 +10,10 @@
       <form >
         <label for="cowsay-text">Enter Cowsay Text:</label>
         <input type="text" name="cowsay-text" ng-model="cowsayText" />
-        <input type="button" ng-click="finalSay" value="submit" />
+        <input type="button" ng-click="finalSay()" value="submit" />
       </form>
       <pre>{{say()}}</pre>
-      <pre>Final Result: {{finalSay}}</pre>
+      <pre>Final Result: {{finalCow}}</pre>
     </main>
   </body>
 </html>
