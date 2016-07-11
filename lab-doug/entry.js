@@ -36,4 +36,8 @@ app.controller('cowsayController', ['$scope', function($scope){
     var text = $scope.cowsayText || '';
     return cowsay.say({text: text});
   };
-}])
+  $scope.finalSay = function(text){
+    // var text = $scope.cowsayText || '';
+    return cowsay.say({text: text});
+  };
+}]);
