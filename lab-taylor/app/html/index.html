@@ -8,7 +8,7 @@
   </head>
   <body>
     <main ng-controller="CowsayController">
-      <form ng-submit="say()">
+      <form ng-submit="finalize(cowsayText, cowsayFile)">
         <label for="cowsay-text">Make the Cow Say Something<br /></label>
         <input type="cowsay-text" text="text" ng-model="cowsayText">
 
@@ -17,8 +17,8 @@
         </select>
 
         <br />
-        <button type="cowsay-button" name="cowsay-button" ng-click="finalize(cowsayText, cowsayFile)">Finalize Cow</button>
-        <button type="reset-button" name="cowsay-reset" ng-click="resetCow()">Reset Cow</button>
+        <button type="submit" name="cowsay-button">Finalize Cow</button>
+        <button type="button" name="cowsay-reset" ng-click="resetCow()">Reset Cow</button>
       </form>
 
       <h1>Live Preview</h1>
