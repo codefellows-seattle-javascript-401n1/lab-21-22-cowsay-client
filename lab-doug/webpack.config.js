@@ -9,7 +9,7 @@ var babel = require('babel-loader');
  * the output "path" property specifies the directory where bundle.js will be saved
  */
 module.exports = {
-  entry: `${__dirname}/entry.js`,
+  entry: `${__dirname}/app/entry.js`,
   output: {
     filename: 'bundle.js',
     path: 'build'
