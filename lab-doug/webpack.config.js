@@ -1,7 +1,7 @@
 'use strict';
 
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var babel = require('babel-loader');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+//var babel = require('babel-loader');
 /**
  * when webpack is called, it will look for the webpack.config.js file.  If it is found, it will require this module, which exports an object that configs webpack.
  * the "entry" property is the start point for webpack
