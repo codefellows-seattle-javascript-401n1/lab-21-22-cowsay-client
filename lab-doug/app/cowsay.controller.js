@@ -17,5 +17,10 @@ angular.module('cowsayApp').controller('cowsayController', ['$scope', function($
     var text = $scope.cowsayText || '';
     return cowsay.say({text: text});
   };
-  $scope.finalSay = cowsay.say({text: $scope.cowsayText });
+  $scope.finalCow = '';
+  $scope.finalSay = function(){
+    $scope.finalCow =  cowsay.say({text: $scope.cowsayText });
+  };
+
+  //the second pre tag should be final view, populated with what ever the first pretag shows when ever the submit button on the form is triggered
 }]);
