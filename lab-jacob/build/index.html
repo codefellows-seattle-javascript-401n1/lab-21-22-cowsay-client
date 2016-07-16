@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="cowsayApp">
+  <head>
+    <title>Code Fellows Angular Lab</title>
+    <script src="../build/bundle.js"></script>
+    <link rel="stylesheet" type="text/css" href="../build/bundle.css">
+  </head>
+  <body>
+    <main ng-controller="CowsayController">
+      <h1>Make Things Talk</h1>
+      <div id="user">
+        <form ng-submit="done()">
+          <div class="input-block">
+            <label for="cowsay-text">Write Some Text</label>
+            <input name="cowsay-text" type="text" ng-model="cowsayText">
+          </div>
+          <div class="input-block">
+            <label for="animal">Select your creature</label>
+            <select name="animal" ng-model="cowsayFile">
+              <option ng-repeat="cow in cowfiles" value="{{cow}}">{{cow}}</option>
+            </select>
+            <button type="submit">Check out your Creature!</button>
+          </div>
+        </form>
+        <div class="container">
+          <pre id="preview"> {{say()}} </pre>
+        </div>
+      </div>
+      <pre id="result"> {{result}} </pre>
+    </main>
+  </body>
+</html>
