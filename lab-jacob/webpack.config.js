@@ -16,6 +16,18 @@ module.exports = {
       {
         test: /\.scss$/,
         loader: extractPlugin.extract('style', 'css!sass!')
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel',
+        exclude: /node_modules/,
+        query: {
+          presets: ['es2015']
+        }
+      },
+      {
+        test: /\.otf$/,
+        loader: 'url-loader?name=scss/fonts.[name].[ext]'
       }
     ]
   }

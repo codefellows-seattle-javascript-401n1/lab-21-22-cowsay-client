@@ -47,29 +47,38 @@
 	'use strict';
 
 	// webpack
+
 	__webpack_require__(1);
 	__webpack_require__(2);
 
 	// npm
-	const angular = __webpack_require__(7);
-	const cowsay = __webpack_require__(9);
+	var angular = __webpack_require__(7);
+	var cowsay = __webpack_require__(9);
 
 	// app constants
-	const app = angular.module('cowsayApp', []);
+	var app = angular.module('cowsayApp', []);
 
-	app.controller('CowsayController', ['$scope', function($scope){
+	app.controller('CowsayController', ['$scope', function ($scope) {
 	  $scope.cowsayText = 'you can make me talk!';
-	  $scope.say = function(){
-	    let text = $scope.cowsayText || 'Write something here!';
-	    return cowsay.say({text: text});
+	  $scope.cowsayFile = 'default';
+	  $scope.say = function () {
+	    var text = $scope.cowsayText || 'Write something here!';
+	    return cowsay.say({ text: text, f: $scope.cowsayFile });
 	  };
 
-	  $scope.done = function(){
-	    let text = $scope.cowsayText || 'write something here!';
-	    $scope.result = cowsay.say({text: text});
+	  $scope.done = function () {
+	    var text = $scope.cowsayText || 'write something here!';
+	    $scope.result = cowsay.say({ text: text, f: $scope.cowsayFile });
 	  };
+
+	  cowsay.list(function (err, list) {
+	    if (err) {
+	      $scope.cowfiles = ['default'];
+	      return;
+	    }
+	    $scope.cowfiles = list;
+	  });
 	}]);
-
 
 /***/ },
 /* 1 */

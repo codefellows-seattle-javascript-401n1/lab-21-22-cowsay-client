@@ -7,14 +7,26 @@
   </head>
   <body>
     <main ng-controller="CowsayController">
-      <form ng-submit="done()">
-        <label for="cowsay-text">Tell me your thoughts</label>
-        <input name="cowsay-text" type="text" ng-model="cowsayText">
-        <button type="submit">cowsay:</button>
-      </form>
-      <p>{{cowsayText}}</p>
-      <pre> {{say()}} </pre>
-      <pre> {{result}} </pre>
+      <h1>Make Things Talk</h1>
+      <div id="user">
+        <form ng-submit="done()">
+          <div class="input-block">
+            <label for="cowsay-text">Write Some Text</label>
+            <input name="cowsay-text" type="text" ng-model="cowsayText">
+          </div>
+          <div class="input-block">
+            <label for="animal">Select your creature</label>
+            <select name="animal" ng-model="cowsayFile">
+              <option ng-repeat="cow in cowfiles" value="{{cow}}">{{cow}}</option>
+            </select>
+            <button type="submit">Super size me!</button>
+          </div>
+        </form>
+        <div class="container">
+          <pre id="preview"> {{say()}} </pre>
+        </div>
+      </div>
+      <pre id="result"> {{result}} </pre>
     </main>
   </body>
 </html>

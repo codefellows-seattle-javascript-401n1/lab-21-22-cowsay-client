@@ -1,3 +1,53 @@
 // importing theme and normalize vendor file
 @import "vendor/normalize.css";
 @import "_theme.scss";
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: $app-background;
+}
+
+h1 {
+  font: Ailerons;
+  color: $app-green;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#user {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.container {
+  margin: 20px 20px 20px 20px;
+  width: 250px;
+  height: 250px;
+}
+
+#preview {
+  font-size: .75em;
+}
+
+#result {
+  text-align: center;
+  font-size: 2em;
+}
