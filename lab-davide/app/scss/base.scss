@@ -1,0 +1,18 @@
+//import libraries.these imports work just like a require statement//
+@import 'vendor/normalize.css';
+
+//partials//
+@import '_theme.scss';
+
+//the general look for an element will be stored in base//
+body {
+  background-color: $app-red;
+};
+
+h2 {
+  color: $app-purple;
+}
+
+pre {
+  background-color: $app-lime;
+}
