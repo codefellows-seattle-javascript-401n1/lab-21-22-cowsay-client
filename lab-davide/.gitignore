@@ -3,9 +3,9 @@
 
 node_modules
 
-build/*
-bundle.js
-#build
+/build/*
+build
+# build
 
 ### OSX ###
 *.DS_Store
