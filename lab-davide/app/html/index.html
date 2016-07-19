@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>What do Cows actually say?</title>
-    <link rel="stylesheet" href="bundle.css"/>
+    <link rel="stylesheet" type= "text/css" href="bundle.css"/>
     <script src ="bundle.js"></script>
   </head>
   <body>
@@ -17,11 +17,11 @@
           <select ng-model = "cowsayFile">
             <option ng-repeat = "cow in cowFiles" value= "{{cow}}">{{cow}}</option>
           </select>
-          <button type = "submit">MOODONE</button>
+          <button type = "submit">MOO-DONE</button>
       </form>
-      <h2>preview</h2>
-      <pre>{{ say() }}</pre>
-      <h2>hit MOODONE to see final view</h2>
+      <p>preview</p>
+      <pre> {{ say() }} </pre>
+      <p>hit MOODONE to see final view</p>
       <pre>{{ result }}</pre>
     </main>
   </body>

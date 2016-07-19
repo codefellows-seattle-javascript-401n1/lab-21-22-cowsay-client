@@ -2,8 +2,6 @@
 
 //webpack asset. is copying the below into the build directory//
 require('!!file?name=[name].[ext]!./html/index.html');
-
-
 require('./scss/base.scss'); //leave ext on sass file//
 
 //npm module//
@@ -14,7 +12,7 @@ const cowsay = require('cowsay-browser');
 var app = angular.module('cowsayApp', []);
 
 //$scope is a injectible predefined piece of functionality that we can add to a controller//
-app.controller('CowsayController', ['$scope', function($scope) {
+app.controller('cowsayController', [ '$scope', function($scope) {
   $scope.cowsayText = 'Cows fall from the sky from trying to jump over the moon';
   $scope.cowsayFile = 'default';
   $scope.say = function() {
@@ -35,6 +33,5 @@ app.controller('CowsayController', ['$scope', function($scope) {
     $scope.cowfiles = list;
   });
 }]);
-
 
 console.log('webpack is working');
