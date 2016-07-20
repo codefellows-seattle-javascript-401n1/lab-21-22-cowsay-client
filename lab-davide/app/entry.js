@@ -1,6 +1,6 @@
 'use strict';
 
-//webpack asset. is copying the below into the build directory//
+// webpack is copying the below into the build directory//
 require('!!file?name=[name].[ext]!./html/index.html');
 require('./scss/base.scss'); //leave ext on sass file//
 
@@ -15,6 +15,7 @@ var app = angular.module('cowsayApp', []);
 app.controller('cowsayController', [ '$scope', function($scope) {
   $scope.cowsayText = 'Cows fall from the sky from trying to jump over the moon';
   $scope.cowsayFile = 'default';
+
   $scope.say = function() {
     let text = $scope.cowsayText || 'Please fill this out, thx moo!';
     return cowsay.say({text: text, f: $scope.cowsayFile});
@@ -33,5 +34,3 @@ app.controller('cowsayController', [ '$scope', function($scope) {
     $scope.cowfiles = list;
   });
 }]);
-
-console.log('webpack is working');
