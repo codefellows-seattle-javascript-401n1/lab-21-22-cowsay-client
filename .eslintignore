@@ -1,4 +1,4 @@
 **/node_modules/*
 **/vendor/*
 **/*.min.js
-**/bundle.js
+**/build/*
