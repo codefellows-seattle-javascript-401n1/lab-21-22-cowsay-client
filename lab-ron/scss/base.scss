@@ -1,0 +1,14 @@
+@import "vendor/normalize.css";
+@import "_theme";
+
+body {
+  background-color: $app-green;
+}
+
+pre {
+  color: $app-reddish;
+}
+
+button {
+  color: $app-rose;
+}
